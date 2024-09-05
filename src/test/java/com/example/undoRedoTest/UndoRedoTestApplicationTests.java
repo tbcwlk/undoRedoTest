@@ -11,14 +11,16 @@ class UndoRedoTestApplicationTests {
 
 	@Test
 	void contextLoads() {
-		calculator.calc('+', 100);//加法
-		calculator.calc('-', 50);//减法
+		calculator.calc('+', 200);//加法
+		calculator.calc('-', 100);//减法
 		calculator.calc('*', 10);//乘法
-		calculator.calc('/', 2);//除法
+		calculator.calc('/', 5);//除法
+
 		calculator.undo(4);//撤销前四个步骤
-		calculator.redo(3);//再次执行三个步骤
+		calculator.redo(4);//再次执行三个步骤
+
 		//再次执行
-		calculator.calc('+', 2);//加法
+		calculator.calc('+', 6);//加法
 	}
 
 }
